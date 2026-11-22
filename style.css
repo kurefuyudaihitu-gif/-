@@ -75,8 +75,10 @@ body {
   border-radius: 999px;
   font-weight: 700;
   font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
   text-decoration: none;
-  transition: transform 0.15s ease, opacity 0.15s ease;
+  transition: transform 0.15s ease, opacity 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
 }
 
 .btn:hover {
@@ -87,12 +89,27 @@ body {
 .btn-primary {
   background-color: var(--accent);
   color: #ffffff;
+  box-shadow: 0 6px 16px rgba(184, 67, 54, 0.22);
+}
+
+.btn-secondary {
+  background-color: var(--surface);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.btn-secondary:hover {
+  background-color: var(--accent-soft);
 }
 
 .price-note {
   font-size: 14px;
   color: var(--muted);
   font-weight: 500;
+}
+
+.hero-actions .price-note {
+  flex-basis: 100%;
 }
 
 .gallery-section {
@@ -253,7 +270,26 @@ h2 {
 
 .order-cta {
   margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.order-cta .cta-note {
+  flex-basis: 100%;
+  margin: 0;
   text-align: center;
+  font-size: 13px;
+}
+
+@media (max-width: 480px) {
+  .hero-actions .btn,
+  .order-cta .btn {
+    width: 100%;
+    padding: 13px 18px;
+  }
 }
 
 .site-footer {
