@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>くれふゆ｜手書きサンクスカード・メッセージカード作品見本</title>
+  <meta name="description" content="サンクスカード・メッセージカード代筆「くれふゆ（@kurefuyu）」の作品見本ギャラリーです。手書きの温かさを1枚から丁寧にお届けします。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="brand-badge">手書きカード代筆</div>
+      <h1 class="site-title">くれふゆ 作品見本</h1>
+      <p class="site-subtitle">
+        サンクスカード・メッセージカードを、想いに合わせた手書き文字でお届けします。<br />
+        ショップの同梱カードや、大切な方へのひとことにも。
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://x.com/kurefuyu" target="_blank" rel="noopener noreferrer">
+          X（@kurefuyu）で依頼・相談する
+        </a>
+        <span class="price-note">1枚 300円〜（DMにてお気軽にどうぞ）</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="gallery-section" aria-label="作品見本ギャラリー">
+      <div class="section-head">
+        <h2>作品ギャラリー</h2>
+        <div class="filter-bar" role="tablist" aria-label="カテゴリ絞り込み">
+          <button class="filter-btn is-active" data-category="all" role="tab" aria-selected="true">すべて</button>
+          <button class="filter-btn" data-category="thanks" role="tab" aria-selected="false">サンクスカード</button>
+          <button class="filter-btn" data-category="message" role="tab" aria-selected="false">メッセージ</button>
+          <button class="filter-btn" data-category="season" role="tab" aria-selected="false">季節・イベント</button>
+        </div>
+      </div>
+
+      <div id="gallery-grid" class="gallery-grid"></div>
+    </section>
+
+    <section class="order-section">
+      <h2>ご依頼の流れ</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <span class="step-num">01</span>
+          <h3>XのDMでご連絡</h3>
+          <p>「作品見本を見た」とお送りください。用途やご希望の枚数をお伺いします。</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">02</span>
+          <h3>文面・雰囲気のご相談</h3>
+          <p>筆文字風・すっきりしたペン字・ワンポイントイラストなど、お好みに合わせてご提案します。</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">03</span>
+          <h3>手書きでお届け</h3>
+          <p>1枚ずつ心を込めて手書きし、確認のうえ発送いたします。</p>
+        </div>
+      </div>
+      <div class="order-cta">
+        <a class="btn btn-primary" href="https://x.com/kurefuyu" target="_blank" rel="noopener noreferrer">
+          @kurefuyu のDMへ進む
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© くれふゆ（@kurefuyu）</p>
+    </div>
+  </footer>
+
+  <div id="lightbox" class="lightbox" hidden aria-modal="true" role="dialog" aria-label="作品拡大表示">
+    <button id="lightbox-close" class="lightbox-close" aria-label="閉じる">×</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="" />
+      <div class="lightbox-caption">
+        <span id="lightbox-tag" class="card-tag"></span>
+        <h3 id="lightbox-title"></h3>
+        <p id="lightbox-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
