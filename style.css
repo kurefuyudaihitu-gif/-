@@ -361,3 +361,132 @@ h2 {
   font-size: 14px;
   color: var(--muted);
 }
+
+/* ============================================================
+   ジャンル別ページ対応（2026-11-23 追加）
+   - トップページのジャンル入口カード
+   - メッセージ / message.html の時系列横並び
+   ============================================================ */
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.card-meta .card-tag {
+  margin-bottom: 0;
+}
+
+.work-date {
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.03em;
+}
+
+/* ジャンル別ページへ遷移する入口カード（リンク） */
+.work-card--link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.work-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 12px 0 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.work-more span {
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+
+.work-card--link:hover .work-more span,
+.work-card:hover .work-more span {
+  transform: translateX(3px);
+}
+
+/* ジャンル別ページのヘッダー */
+.hero--compact {
+  padding: 32px 0 30px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.back-link:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.scroll-hint {
+  display: none;
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+
+/* 同じジャンルの作品を時系列に横並び（PCは横並び、スマホは横スクロール） */
+.genre-row {
+  display: flex;
+  align-items: stretch;
+  gap: 22px;
+  overflow-x: auto;
+  padding: 2px 2px 16px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.genre-row .genre-card {
+  flex: 0 0 min(420px, 82vw);
+  max-width: 100%;
+  scroll-snap-align: start;
+}
+
+.genre-row::-webkit-scrollbar {
+  height: 8px;
+}
+
+.genre-row::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+}
+
+.order-lead {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.page-actions {
+  margin-top: 26px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 640px) {
+  .scroll-hint {
+    display: block;
+  }
+
+  .genre-row {
+    gap: 16px;
+  }
+
+  .genre-row .genre-card {
+    flex-basis: 84vw;
+  }
+}

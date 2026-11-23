@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>メッセージ作品｜くれふゆ 作品見本</title>
+  <meta name="description" content="くれふゆ（@kurefuyu）のメッセージカード作品を時系列でまとめたページです。ひとこと応援メッセージから和風の「巡り巡る」カードまで。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero hero--compact">
+    <div class="container">
+      <a class="back-link" href="index.html">← トップページに戻る</a>
+      <div class="brand-badge">メッセージ</div>
+      <h1 class="site-title">メッセージ作品</h1>
+      <p class="site-subtitle">
+        ひとこと応援メッセージから、和風の「巡り巡る」カードまで。<span id="genre-count">全2作品</span>を時系列（古い順）で左から並べています。<br />
+        カードをタップすると拡大表示します。
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="gallery-section" aria-label="メッセージ作品一覧">
+      <div class="section-head">
+        <h2>時系列で見る</h2>
+        <p class="scroll-hint">← 横にスクロールできます →</p>
+      </div>
+      <div id="genre-row" class="genre-row"></div>
+    </section>
+
+    <section class="order-section">
+      <h2>ご依頼・ご相談</h2>
+      <p class="order-lead">文面や雰囲気はご相談しながら決められます。1枚からどうぞ。</p>
+      <div class="order-cta">
+        <a class="btn btn-primary" href="https://buy.stripe.com/fZu28l7V74so8kVafR6Zy01" target="_blank" rel="noopener noreferrer">
+          今すぐ注文・決済する（300円〜）
+        </a>
+        <a class="btn btn-secondary" href="https://x.com/kurefuyu" target="_blank" rel="noopener noreferrer">
+          @kurefuyu のDMで相談する
+        </a>
+        <p class="price-note cta-note">1枚 300円〜｜決済後、XのDMで文面・ご希望をお伺いします。カード決済・Apple Pay・Link対応。</p>
+      </div>
+      <div class="page-actions">
+        <a class="btn btn-secondary" href="index.html">トップページに戻る</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© くれふゆ（@kurefuyu）</p>
+    </div>
+  </footer>
+
+  <div id="lightbox" class="lightbox" hidden aria-modal="true" role="dialog" aria-label="作品拡大表示">
+    <button id="lightbox-close" class="lightbox-close" aria-label="閉じる">×</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="" />
+      <div class="lightbox-caption">
+        <span id="lightbox-tag" class="card-tag"></span>
+        <h3 id="lightbox-title"></h3>
+        <p id="lightbox-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="works.js"></script>
+  <script src="message.js"></script>
+</body>
+</html>
