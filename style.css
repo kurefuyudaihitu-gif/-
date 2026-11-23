@@ -418,7 +418,8 @@ h2 {
 }
 
 .back-link {
-  display: inline-block;
+  display: block;
+  width: fit-content;
   margin-bottom: 14px;
   font-size: 13px;
   color: var(--muted);
@@ -454,6 +455,11 @@ h2 {
   flex: 0 0 min(420px, 82vw);
   max-width: 100%;
   scroll-snap-align: start;
+}
+
+/* 縦長のカードでも見やすく（ジャンル別ページのサムネイルは正方形枠に） */
+.genre-row .genre-card .work-thumb-wrap {
+  aspect-ratio: 1 / 1;
 }
 
 .genre-row::-webkit-scrollbar {
