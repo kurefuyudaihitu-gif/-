@@ -204,7 +204,7 @@ body {
   .hero-visual {
     order: -1;
     justify-self: center;
-    width: min(216px, 58vw);
+    width: min(244px, 64vw);
   }
 
   .hero-actions {
