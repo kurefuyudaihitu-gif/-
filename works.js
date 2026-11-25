@@ -5,7 +5,7 @@ window.KUREFUYU_WORKS = [
     category: "thanks",
     categoryLabel: "サンクスカード",
     title: "店舗・ショップ向け 感謝カード",
-    description: "角丸カードに温かな筆文字風インクで「ありがとうございます」を丁寧に。小さなハートのワンポイント入り。",
+    description: "角丸カードに温かな筆文字風インクで<br />「ありがとうございます」を丁寧に。<br />小さなハートのワンポイント入り。",
     image: "images/card-01-thanks.jpg"
   },
   {
@@ -14,7 +14,7 @@ window.KUREFUYU_WORKS = [
     category: "message",
     categoryLabel: "メッセージ",
     title: "ひとこと応援メッセージ",
-    description: "細字ペンですっきりと読みやすく仕上げた前向きなひと言カード。手帳や名刺入れにも収まるサイズ感。",
+    description: "細字ペンですっきりと読みやすく<br />仕上げた前向きなひと言カード。<br />手帳や名刺入れにも収まるサイズ感。",
     image: "images/card-02-step.jpg"
   },
   {
@@ -22,7 +22,7 @@ window.KUREFUYU_WORKS = [
     category: "season",
     categoryLabel: "季節・イベント",
     title: "クリスマス グリーティングカード",
-    description: "季節の色合いと「くれふゆ」の落款印をあしらった、あたたかみのある冬のメッセージカード。",
+    description: "季節の色合いと「くれふゆ」の落款印を<br />あしらった、あたたかみのある<br />冬のメッセージカード。",
     image: "images/card-03-christmas.jpg"
   },
   {
@@ -31,7 +31,7 @@ window.KUREFUYU_WORKS = [
     category: "message",
     categoryLabel: "メッセージ",
     title: "和風メッセージカード（巡り巡る）",
-    description: "深い緑の和紙に、赤い梅結びと銀のひし形をあしらった縁起のよい和風カード。「巡り巡る」の言葉を手書きで添えています。",
+    description: "深い緑の和紙に、赤い梅結びと銀のひし形を<br />あしらった縁起のよい和風カード。<br />「巡り巡る」の言葉を手書きで添えています。",
     image: "images/card-04-megurimeguru.jpg"
   }
 ];

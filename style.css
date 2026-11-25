@@ -23,37 +23,59 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* 端末ごとの改行（スマホ専用 / PC専用の <br>） */
+br.sp-only {
+  display: none;
+}
+
+br.pc-only {
+  display: inline;
+}
+
+@media (max-width: 760px) {
+  br.sp-only {
+    display: inline;
+  }
+
+  br.pc-only {
+    display: none;
+  }
+}
+
 .container {
   width: min(1040px, calc(100% - 32px));
   margin: 0 auto;
 }
 
 .hero {
-  padding: 56px 0 40px;
+  padding: 48px 0 44px;
   border-bottom: 1px solid var(--border);
   background: radial-gradient(circle at top right, #f5efe6 0%, var(--bg) 60%);
+  text-align: center;
 }
 
 /* ============================================================
-   ヒーロー：左にテキスト・右にくれふゆのキャラクターイラスト
-   （2026-11-24 追加）
+   ヒーロー：イラストを上に置き、文章はすべて中央揃え
+   （2026-11-25 中央配置に変更）
    ============================================================ */
 .hero-inner {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: clamp(24px, 5vw, 56px);
+  gap: clamp(18px, 3vw, 28px);
+  text-align: center;
 }
 
 .hero-copy {
   min-width: 0;
+  max-width: 680px;
+  text-align: center;
 }
 
 .hero-visual {
   position: relative;
   margin: 0;
-  justify-self: end;
-  width: clamp(240px, 29vw, 336px);
+  width: clamp(200px, 26vw, 272px);
 }
 
 /* イラストの背後に滲むように置く淡い円 */
@@ -83,12 +105,22 @@ body {
 .hero-price {
   display: inline-flex;
   flex-direction: column;
-  gap: 1px;
-  padding: 9px 18px 10px;
+  align-items: center;
+  gap: 2px;
+  padding: 9px 20px 11px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 14px;
   box-shadow: 0 4px 14px rgba(44, 39, 36, 0.05);
+  text-align: center;
+}
+
+.hero-price span.price-min {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+  line-height: 1.4;
 }
 
 .hero-price strong {
@@ -127,15 +159,20 @@ body {
 }
 
 .site-subtitle {
-  margin: 0 0 24px;
+  max-width: 640px;
+  margin: 0 auto 26px;
   color: var(--muted);
   font-size: 15px;
+  text-align: center;
+  text-wrap: pretty;
+  word-break: auto-phrase;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 14px;
 }
 
@@ -188,31 +225,26 @@ body {
   flex-basis: 100%;
 }
 
-/* スマホ：イラストを上に、その下にタイトルの縦並び */
+/* スマホ：少し詰めて、文字も読みやすい大きさに */
 @media (max-width: 760px) {
   .hero {
-    padding: 34px 0 30px;
+    padding: 30px 0 30px;
   }
 
   .hero-inner {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    text-align: center;
-    gap: 20px;
+    gap: 16px;
   }
 
   .hero-visual {
-    order: -1;
-    justify-self: center;
-    width: min(244px, 64vw);
-  }
-
-  .hero-actions {
-    justify-content: center;
+    width: min(230px, 60vw);
   }
 
   .site-title {
-    margin-top: 12px;
+    margin-top: 10px;
+  }
+
+  .site-subtitle {
+    font-size: 14.5px;
   }
 }
 
@@ -222,11 +254,12 @@ body {
 
 .section-head {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  gap: 16px;
+  justify-content: center;
+  gap: 14px;
   margin-bottom: 24px;
+  text-align: center;
 }
 
 h2 {
@@ -235,11 +268,13 @@ h2 {
   font-size: 22px;
   font-weight: 700;
   letter-spacing: 0.04em;
+  text-align: center;
 }
 
 .filter-bar {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 8px;
 }
 
@@ -309,6 +344,7 @@ h2 {
 
 .work-body {
   padding: 16px 18px 18px;
+  text-align: center;
 }
 
 .card-tag {
@@ -332,11 +368,15 @@ h2 {
   margin: 0;
   font-size: 13.5px;
   color: var(--muted);
+  text-align: center;
+  text-wrap: pretty;
+  word-break: auto-phrase;
 }
 
 .order-section {
   padding: 36px 0 56px;
   border-top: 1px solid var(--border);
+  text-align: center;
 }
 
 .steps-grid {
@@ -351,6 +391,7 @@ h2 {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 20px;
+  text-align: center;
 }
 
 .step-num {
@@ -370,6 +411,8 @@ h2 {
   margin: 0;
   font-size: 13.5px;
   color: var(--muted);
+  text-wrap: pretty;
+  word-break: auto-phrase;
 }
 
 .order-cta {
@@ -386,6 +429,9 @@ h2 {
   margin: 0;
   text-align: center;
   font-size: 13px;
+  line-height: 1.9;
+  text-wrap: pretty;
+  word-break: auto-phrase;
 }
 
 @media (max-width: 480px) {
@@ -453,6 +499,13 @@ h2 {
 
 .lightbox-caption {
   padding: 16px 20px 20px;
+  text-align: center;
+}
+
+.lightbox-caption p {
+  text-align: center;
+  text-wrap: pretty;
+  word-break: auto-phrase;
 }
 
 .lightbox-caption h3 {
@@ -475,6 +528,7 @@ h2 {
 .card-meta {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 8px;
@@ -519,12 +573,13 @@ h2 {
 /* ジャンル別ページのヘッダー */
 .hero--compact {
   padding: 32px 0 30px;
+  text-align: center;
 }
 
 .back-link {
   display: block;
   width: fit-content;
-  margin-bottom: 14px;
+  margin: 0 auto 14px;
   font-size: 13px;
   color: var(--muted);
   text-decoration: none;
@@ -542,6 +597,7 @@ h2 {
   margin: 0;
   font-size: 12.5px;
   color: var(--muted);
+  text-align: center;
 }
 
 /* 同じジャンルの作品を時系列に横並び（PCは横並び、スマホは横スクロール） */
@@ -579,6 +635,9 @@ h2 {
   margin: 10px 0 0;
   font-size: 14px;
   color: var(--muted);
+  text-align: center;
+  text-wrap: pretty;
+  word-break: auto-phrase;
 }
 
 .page-actions {

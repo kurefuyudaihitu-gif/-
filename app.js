@@ -99,7 +99,7 @@ function openLightbox(item) {
   lightboxImg.alt = item.title;
   lightboxTag.textContent = item.categoryLabel;
   lightboxTitle.textContent = item.title;
-  lightboxDesc.textContent = item.description;
+  lightboxDesc.innerHTML = item.description;
   lightbox.hidden = false;
 }
 
