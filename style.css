@@ -440,6 +440,20 @@ h2 {
     width: 100%;
     padding: 13px 18px;
   }
+
+  /* 絞り込みボタンは2×2に整えて中央に */
+  .filter-bar {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    max-width: 304px;
+    margin: 0 auto;
+  }
+
+  .filter-btn {
+    width: 100%;
+    padding: 8px 10px;
+  }
 }
 
 .site-footer {
